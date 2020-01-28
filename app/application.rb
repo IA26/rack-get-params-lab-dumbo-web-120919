@@ -17,12 +17,13 @@ class Application
       resp.write handle_search(search_term)
       
     elsif req.path.match(/cart/)
-      if @@cart
-        @@cart.each do |cart_item|
-        resp.write "#{cart_item}\n"
-       else
-        resp.write "Empty cart"  
-       end
+       if @@cart
+         @@cart.each do |cart_item|
+          resp.write "#{cart_item}\n"
+        end 
+        else
+         resp.write "Empty cart"  
+        end
     elsif req.path.match(/add/)
       if @@items.include?(search_term)
         @@cart << search_term
