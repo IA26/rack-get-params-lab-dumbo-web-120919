@@ -15,7 +15,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path(/cart/)
       @@cart.each do |cart_item|
-        resp.write "Your cart has #{cart"
+        resp.write "Your cart has #{cart_item}"
     else
       resp.write "Path Not Found"
     end
