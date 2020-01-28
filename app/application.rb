@@ -20,10 +20,9 @@ class Application
       if @@cart
         @@cart.each do |cart_item|
         resp.write "#{cart_item}\n"
-      
-      else
+       else
         resp.write "Empty cart"  
-      end
+       end
     elsif req.path.match(/add/)
       if @@items.include?(search_term)
         @@cart << search_term
