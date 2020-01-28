@@ -21,7 +21,7 @@ class Application
         resp.write "Your cart has #{cart_item}"
       end 
       
-    elsif req.path(/add/)
+    elsif req.path.match(/add/)
       
     
     else
