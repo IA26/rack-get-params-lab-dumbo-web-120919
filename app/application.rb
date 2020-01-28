@@ -17,6 +17,7 @@ class Application
     elsif req.path(/cart/)
       @@cart.each do |cart_item|
         resp.write "Your cart has #{cart_item}"
+      end 
     else
       resp.write "Path Not Found"
     end
