@@ -22,6 +22,7 @@ class Application
       end 
       
     elsif req.path.match(/add/)
+      @@item
       
     
     else
