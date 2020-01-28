@@ -22,7 +22,12 @@ class Application
       end 
       
     elsif req.path.match(/add/)
-      @@item
+      if @@items.include?(search_term)
+        @@cart << search_term
+        resp.write "#{search_term} is one of our items"
+      else
+        resp.write "Couldn't find #{search_term}"
+      end
       
     
     else
